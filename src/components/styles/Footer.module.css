@@ -1,0 +1,55 @@
+.Footer {
+  background-color: #445269;
+  color: white;
+  padding: 80px 0;
+}
+
+.Container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 10;
+  margin: 0 auto;
+}
+
+.col {
+  grid-column: span 6;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.col > p {
+  margin: 10px auto;
+}
+
+.col > p:first-child {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.Footer > div:last-child {
+  margin-top: 5em;
+  text-align: center;
+}
+
+@media screen and (min-width: 660px) {
+  .col {
+    grid-column: span 4;
+    font-size: 14px;
+  }
+  .col:last-child {
+    grid-column: 4/8;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .col {
+    grid-column: span 3;
+    font-size: 14px;
+  }
+  .col:last-child {
+    grid-column: span 3;
+    text-align: start;
+  }
+}
